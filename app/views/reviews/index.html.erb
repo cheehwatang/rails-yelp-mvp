@@ -1,0 +1,12 @@
+<h1 class="mb-4">Reviews for <%= @restaurant.name %></h1>
+
+<div class="cards d-flex flex-column flex-wrap gap-5">
+  <% @reviews.each do |review| %>
+    <div class="card review-card position-relative">
+      <div class="card-body">
+        <p class="card-text"><%= review.content %></p>
+        <p class="card-text">Rating: <%= review.rating %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
