@@ -1,8 +1,9 @@
-<h1>Restaurants</h1>
+<h1 class="mb-4">Restaurants</h1>
 
 <div class="cards d-flex flex-wrap gap-5">
   <% @restaurants.each do |restaurant| %>
-    <div class="card restaurant-card" style="width: 20rem;">
+    <div class="card restaurant-card position-relative" style="width: 20rem;">
+      <%= link_to "", restaurant_path(restaurant), class: "position-absolute w-100 h-100 z-1" %>
       <div class="card-body">
         <h5 class="card-title"><%= restaurant.name %></h5>
         <p class="card-text"><%= restaurant.address %></p>
