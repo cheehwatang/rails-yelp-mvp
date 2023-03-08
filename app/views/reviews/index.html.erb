@@ -1,4 +1,4 @@
-<h1 class="mb-4">Reviews for <%= @restaurant.name %></h1>
+<h1 class="mb-4">Recent reviews for <%= @restaurant.name %></h1>
 
 <div class="cards d-flex flex-column flex-wrap gap-5">
   <% @reviews.each do |review| %>
@@ -6,7 +6,10 @@
       <div class="card-body">
         <p class="card-text"><%= review.content %></p>
         <p class="card-text">Rating: <%= review.rating %></p>
+        <p class="card-text">Posted: <%= time_ago_in_words(review.updated_at) %> ago</p>
       </div>
     </div>
   <% end %>
 </div>
+
+<%= link_to 'Back', restaurant_path(@restaurant), class: 'btn btn-primary my-4' %>

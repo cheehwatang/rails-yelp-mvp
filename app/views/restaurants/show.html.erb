@@ -7,4 +7,7 @@
     <li class="list-group-item"><strong>Cuisine:</strong> <%= @restaurant.category %></li>
     <li class="list-group-item"><strong>Contact:</strong> <%= @restaurant.phone_number %></li>
   </ul>
+  <%= link_to 'Add Review', new_restaurant_review_path(@restaurant), class: 'btn btn-outline-primary' %>
+  <%= link_to 'See Reviews', restaurant_reviews_path(@restaurant), class: 'btn btn-outline-primary' %>
 </div>
+<%= link_to 'Back', restaurants_path, class: 'btn btn-primary my-4' %>

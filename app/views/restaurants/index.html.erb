@@ -1,5 +1,7 @@
 <h1 class="mb-4">Restaurants</h1>
 
+<%= link_to 'Add Restaurant', new_restaurant_path, class: 'btn btn-outline-primary mb-4' %>
+
 <div class="cards d-flex flex-wrap gap-5">
   <% @restaurants.each do |restaurant| %>
     <div class="card restaurant-card position-relative" style="width: 20rem;">
